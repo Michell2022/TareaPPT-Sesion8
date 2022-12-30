@@ -3,11 +3,11 @@
     <h1>Login</h1>
     <p>
       <label for="user">Usuario:</label>
-      <input type="text" name="user" id="user" [(ngModel)]="user">
+      <input type="text" name="user" id="user" [(ngModel)]="user" #userin>
     </p>
     <p>
       <label for="pass">Password:</label>
-      <input type="password" name="pass" id="pass" [(ngModel)]="pass">
+      <input type="password" name="pass" id="pass" [(ngModel)]="pass" #contra>
     </p>
     <div class="validar">
       <button (click)="verificarDatos()">Login</button>
@@ -16,7 +16,7 @@
 </div>
 
 <div class="mensajes" *ngIf="correcto">
-  <span>Bienvenido usuario:</span>
+  <span>Bienvenido usuario: {{usuario}}</span>
   <nav>
     <a href="">Home</a>
     <a href="">Support</a>

@@ -19,8 +19,10 @@ export class AppComponent {
     // CREANDO FUNCION VALIDAR LOGIN
     if (this.user === this.usuario && this.pass === this.password) {
       this.correcto = true;
+      this.incorrecto = false;
     } else {
       this.incorrecto = true;
+      this.correcto = false;
     }
 
   }
