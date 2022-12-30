@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'login';
+
+  correcto: boolean = false;
+  incorrecto: boolean = false;
+  user = '';
+  pass = '';
+  usuario: string = 'michell';
+  password: string = 'enero2022';
+
+  verificarDatos() {
+
+    // CREANDO FUNCION VALIDAR LOGIN
+    if (this.user === this.usuario && this.pass === this.password) {
+      this.correcto = true;
+    } else {
+      this.incorrecto = true;
+    }
+
+  }
 }
